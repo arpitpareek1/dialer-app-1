@@ -6,11 +6,16 @@ import React from 'react';
 import HomeScreen from './components/HomeScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LoginScreen from './components/LoginScreen';
+import HistoryScreen from './components/HistoryScreen';
 
 const Tab = createBottomTabNavigator();
 
 const DialerIcon = ({color, size}: {color: string; size: number}) => (
   <Icon name="call" color={color} size={size} />
+);
+
+const HistoryIcon = ({color, size}: {color: string; size: number}) => (
+  <Icon name="time" color={color} size={size} />
 );
 
 // const ContactsIcon = ({color, size}: {color: string; size: number}) => (
@@ -55,6 +60,14 @@ export default function App() {
           options={{
             tabBarIcon: DialerIcon,
             tabBarLabel: 'Dial',
+          }}
+        />
+        <Tab.Screen
+          name="History"
+          component={HistoryScreen}
+          options={{
+            tabBarIcon: HistoryIcon,
+            tabBarLabel: 'History',
           }}
         />
         {/* <Tab.Screen

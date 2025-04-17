@@ -102,14 +102,14 @@ function OutgoingCall(): React.JSX.Element {
                   style={{width: 70, height: 70, alignSelf: 'center'}}
                 />
               </TouchableOpacity>
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 disabled={recordDisabled}
                 onPress={toggleRecordCall}>
                 <Image
                   source={!isRecording ? RecodingIcon : RecodingIconActive}
                   style={{width: 70, height: 70, alignSelf: 'center'}}
                 />
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </View>
 
             <View
